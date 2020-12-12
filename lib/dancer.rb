@@ -4,6 +4,8 @@ require_relative './dance_module.rb'
 class Dancer #defining our class
   include Dance #the include keyword allows our classes ti use all the methods of the included module as instance methods 
   extend MetaDancing
+  extend FancyDance::ClassMethods
+  include FancyDance::InstanceMethods
 
 attr_accessor :name 
 
